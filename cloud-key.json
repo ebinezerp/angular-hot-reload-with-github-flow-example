@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "poc-for-ci-cd",
+  "private_key_id": "5d78633c5b7a108bf844c6a16af0258c9657ebc8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDb7iWBXMhjCDyU\nq0D3x51DgVZm2QvaZtfCoEdObp4GJNXlN/PDNAbAXJrTKRwOSf4del9CyZimBwVk\n8RSEFCJfWzUwxNz59Sla6DDRfVRjUtxz5obSa0uyP1pXQIeAv+jFZ/x10FXnHKG8\nBQ8ktQlErHD5cy6EB6r0otldXw3BfmDiFAV1/T5vlED0vp4P5o6pFk5+k77ko7sz\nTDUUOdzIZCxcFfjKnh+NcPP9KEZgRZOUnvMagSN0sf8xREEvNOq1h/1Px84+1nSi\nkP8aeOp6t6o9WoM4wcH3iXdI5Yzhqeg+DMyWrKKHwAGzo5iFe8dshnF1gStfAOs+\nHqg4h9fDAgMBAAECggEAAmWIdsNA6G9dCvkIxrUf/hh+jWAHyd6oCEDAi4FswGq4\nrVGcRZV0uLY+9lZy2KcEGWR4KEf+cq9jPCkyYjQT9yUNIdXAsLVJY5UMfyPrU6ps\nqOirXHH7Nls2tqUHNPx3uBBSMc3OOdatM9l8Q5f4x2JNAt2MoAyzV2Ifle26E9CH\nEr7SknmoRj7yPwAFQYI8EqiCxXd/mey+m54vVC75ky6YupmCTyL+EGYq2cBn7qE+\nlBnGV7zdmk69beYgYl/it67LAT2CMeBeRsPMMQHGWZbcDH3C1lwXemRXRjVSG/7X\nXu+GRQUwtP0r8GbwKysjNaKK4PMoJArE8eIibtLbIQKBgQDwZSw9E6oo/kQ0j3pP\nad/HHoxusMaibDQ28tJfYp0ZGDz0mjMQA+pOwZ2NwpL43CGxSfjAaw2/ZFpew/bM\nSYeJEs+8ZhxIb2+uEiS0Igsc2ORbET3ZZiazOdF6RZFAQB2b6/TTz3ElJL2Mu5U7\naIGgeqM+3SyEgNpmU94uj4o/IwKBgQDqNORxWdGH03OZOtAxqZ1NpLxh7s1iskM8\nMOXADd3aCRv1T+4seQwp6Y4B8us1IMiUzOHm3ds43fmvX2wQK2uhegfiRHmZvvMO\nzkpf1MY3Ah3CeHjooRqbnyKhWWKksuQrLvE+itinFURwdjfcJiCrqBLteYzWeL0T\ntN9mBQLe4QKBgGlff7e6AfF8GvuLFMrwlrWab2YpuLgDhBO99nb3K/OPC1EQsmdH\nwBILjntQGcpZ+67RxObbRihp3a8CaRD8/hsYktR7UdRyfFqp+0q2TXa0n8xHT3wW\n6cnQA0F8cwHd2Ny63hNmL6tfYnLo2q4yzfdBKoNowZXHQXRvOMniA3BPAoGABBEb\nDmTS4JrpXPXKe7JISvrbUpAE/Pu/cyIeOzGCcrDJzX6v0hHgBjJKBvqi3u9MzFiq\na4narqgcF9F+XOGEIu+th15NBkBslAs8+2EEeBwPTDsvTkrN3Xnr7gVRUy7QC3fr\nNHzQukYCRDmpSqdW1eQ7P+hma6r5DYiMgIcBv8ECgYEA4SxdtT82QqUOv5RncfFt\nDAkNv/iJNt/QCfYirNz360R2Z+7JfuduTzpovbw+XGVLjIzR5pFUzqJwNlNYuZ73\nBuE9gSQlWv8upN5X6MEGQoG3D0ozZQ0LdU8OEd8IC7YEkcRRYPTL+otlVdTWcRAs\nJEn4M7fmxzgraFfvC4eRxBI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "for-kubernetes-cluster@poc-for-ci-cd.iam.gserviceaccount.com",
+  "client_id": "105439643090621718016",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/for-kubernetes-cluster%40poc-for-ci-cd.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

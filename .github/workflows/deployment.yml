@@ -46,3 +46,15 @@ jobs:
           context: ./backend-app
           push: true
           tags: clipbook/backend-app-hot-reload:V1
+
+
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCLOUD_GSA_KEY }}'
+
+      - name: 'Deploy in kubernetes'
+        run: |
+          gcloud container clusters get-credentials first-cluster --zone us-east1-b --project poc-for-ci-cd
+          kubectl cluster-info
