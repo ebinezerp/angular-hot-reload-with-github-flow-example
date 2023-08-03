@@ -6,20 +6,11 @@ services:
       dockerfile: Dockerfile
     image: clipbook/angular-app-hot-reload-prod:V1
     container_name: angular-hot-reload
-    working_dir: /app
     ports:
-      - '4200:4200'
-
-  nginx:
-    image: nginx:alpine
-    container_name: my-angular-nginx
-    ports:
-      - "80:80"
-    depends_on:
-      - angular-hot-reload
+      - '4200:80'
 
 
-  backend-app:
+  backend-service:
     build:
       context: ./backend-app
       dockerfile: Dockerfile

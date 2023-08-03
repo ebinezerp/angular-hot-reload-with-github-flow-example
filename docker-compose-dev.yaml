@@ -8,25 +8,14 @@ services:
     image: clipbook/angular-app-hot-reload:V1
     container_name: angular-hot-reload
     command: ng serve --host 0.0.0.0
-    working_dir: /app
     ports:
       - '4200:4200'
     volumes:
       - /Users/ebinezer/personal-projects/angular-hotreload/angular-hot-reload-example:/app
       - /app/node_modules
 
-  nginx:
-    image: nginx:alpine
-    container_name: my-angular-nginx
-    volumes:
-      - ./angular-hot-reload-example/nginx-config-local.conf:/etc/nginx/conf.d/default.conf:ro
-    ports:
-      - "80:80"
-    depends_on:
-      - angular-hot-reload
 
-
-  backend-app:
+  backend-service:
     build:
       context: ./backend-app
       dockerfile: Dockerfile

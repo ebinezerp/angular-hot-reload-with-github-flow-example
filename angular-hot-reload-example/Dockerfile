@@ -12,12 +12,27 @@ RUN npm install
 
 COPY . .
 
-COPY nginx-config-local.conf /etc/nginx/conf.d/default.conf
-
-CMD ["ng", "build", "--production"]
+CMD ["npm", "start"]
 
 
+FROM  --platform=linux/amd64 node:latest as production
 
-FROM --platform=linux/amd64 nginx:alpine
-COPY --from=development /app/dist/angular-hot-reload-example /usr/share/nginx/html
-COPY ./nginx-config-prod.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
+
+# Install Angular CLI globally (only needed for building the production version)
+RUN npm install -g @angular/cli
+
+# Install dependencies
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Build the optimized production version of the Angular app
+RUN ng build --configuration=production
+
+
+FROM --platform=linux/amd64 nginx:alpine as final
+COPY --from=production /app/dist/angular-hot-reload-example /usr/share/nginx/html
+COPY ./nginx-config.conf /etc/nginx/conf.d/default.conf
+CMD ["nginx", "-g", "daemon off;"]
