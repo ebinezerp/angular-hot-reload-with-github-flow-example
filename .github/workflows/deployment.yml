@@ -51,7 +51,7 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
-          service_account_key: ${{ secrets.GCLOUD_KEY_BASE64 }}
+          service_account_key: ${{ secrets.GCLOUD_GSA_KEY }}
           project_id: poc-for-ci-cd # Replace 'my-project' with your actual GCP project ID
 
       - name: Authenticate with GKE Cluster
