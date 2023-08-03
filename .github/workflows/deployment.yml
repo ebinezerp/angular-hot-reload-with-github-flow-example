@@ -54,6 +54,12 @@ jobs:
         with:
           credentials_json: '${{ secrets.GCLOUD_GSA_KEY }}'
 
+      - id: 'get-credentials'
+        uses: 'google-github-actions/get-gke-credentials@v1'
+        with:
+          cluster_name: 'first-cluster'
+          location: 'us-east1-b'
+
       - name: 'Deploy in kubernetes'
         run: |
           gcloud container clusters get-credentials first-cluster --zone us-east1-b --project poc-for-ci-cd
