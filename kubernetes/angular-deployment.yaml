@@ -13,7 +13,7 @@ spec:
     metadata:
       name: angular-app
       labels:
-        app:
+        app: angular-app
     spec:
       containers:
         - name: angular-app
