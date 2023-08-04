@@ -34,5 +34,6 @@ RUN ng build --configuration=production
 
 FROM --platform=linux/amd64 nginx:alpine as final
 COPY --from=production /app/dist/angular-hot-reload-example /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx-config.conf /etc/nginx/conf.d/default.conf
 CMD ["nginx", "-g", "daemon off;"]
