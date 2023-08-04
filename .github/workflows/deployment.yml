@@ -68,5 +68,6 @@ jobs:
           export USE_GKE_GCLOUD_AUTH_PLUGIN=True
           gcloud components install gke-gcloud-auth-plugin
           gcloud container clusters get-credentials first-cluster --zone us-east1-b --project poc-for-ci-cd
+          cd kubernetes
           kubectl apply -f angular-deployment.yaml -f backend-deployment.yaml
           kubectl apply -f backend-service.yaml -f frontend-service.yaml
