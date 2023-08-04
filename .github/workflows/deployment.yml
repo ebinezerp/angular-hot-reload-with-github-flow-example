@@ -69,4 +69,3 @@ jobs:
           gcloud components install gke-gcloud-auth-plugin
           gcloud container clusters get-credentials first-cluster --zone us-east1-b --project poc-for-ci-cd
           kubectl apply -f ./kubernetes/angular-deployment.yaml -f ./kubernetes/backend-deployment.yaml
-          kubectl apply -f ./kubernetes/backend-service.yaml -f ./kubernetes/angular-service.yaml
