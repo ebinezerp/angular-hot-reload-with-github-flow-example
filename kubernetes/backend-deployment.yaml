@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: backend-app
-          image: clipbook/backend-app-hot-reload:V5
+          image: clipbook/backend-app-hot-reload:V6
           imagePullPolicy: Always
       restartPolicy: Always
       

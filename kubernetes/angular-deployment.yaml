@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: clipbook/angular-app-hot-reload:V5
+          image: clipbook/angular-app-hot-reload:V6
           imagePullPolicy: Always
       restartPolicy: Always
