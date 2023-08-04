@@ -21,7 +21,7 @@ jobs:
         with:
           context: ./angular-hot-reload-example
           push: true
-          tags: clipbook/angular-app-hot-reload:V4
+          tags: clipbook/angular-app-hot-reload:V5
 
 
 
@@ -46,7 +46,7 @@ jobs:
         with:
           context: ./backend-app
           push: true
-          tags: clipbook/backend-app-hot-reload:V4
+          tags: clipbook/backend-app-hot-reload:V5
 
 
 
