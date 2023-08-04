@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app
+  labels:
+    app:
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      name: angular-app
+      labels:
+        app:
+    spec:
+      containers:
+        - name: angular-app
+          image: clipbook/angular-app-hot-reload-prod:V1
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always

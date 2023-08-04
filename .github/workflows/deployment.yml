@@ -25,6 +25,7 @@ jobs:
 
 
 
+
   backend-app:
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +49,14 @@ jobs:
           tags: clipbook/backend-app-hot-reload:V1
 
 
+
+  deployment:
+    needs: [angular-app, backend-app]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
         with:
@@ -59,4 +68,5 @@ jobs:
           export USE_GKE_GCLOUD_AUTH_PLUGIN=True
           gcloud components install gke-gcloud-auth-plugin
           gcloud container clusters get-credentials first-cluster --zone us-east1-b --project poc-for-ci-cd
-          kubectl cluster-info
+          kubectl apply -f angular-deployment.yaml -f backend-deployment.yaml
+          kubectl apply -f backend-service.yaml -f frontend-service.yaml
