@@ -1,4 +1,4 @@
-FROM  --platform=linux/amd64 node:latest as development
+FROM  --platform=linux/amd64 node:20-alpine as development
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ COPY . .
 CMD ["npm", "start"]
 
 
-FROM  --platform=linux/amd64 node:latest as production
+FROM  --platform=linux/amd64 node:20-alpine as production
 
 WORKDIR /app
 
