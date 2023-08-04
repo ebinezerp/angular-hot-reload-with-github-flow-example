@@ -1,4 +1,4 @@
-FROM node:20-alpine as development
+FROM --platform=linux/amd64 node:20-alpine as development
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ COPY . .
 CMD ["npm", "start"]
 
 
-FROM node:20-alpine as production
+FROM --platform=linux/amd64 node:20-alpine as production
 
 WORKDIR /app
 
@@ -32,7 +32,7 @@ COPY . .
 RUN ng build --configuration=production
 
 
-FROM nginx:alpine as final
+FROM --platform=linux/amd64 nginx:alpine as final
 COPY --from=production /app/dist/angular-hot-reload-example /usr/share/nginx/html
 COPY ./nginx-config.conf /etc/nginx/conf.d/default.conf
 

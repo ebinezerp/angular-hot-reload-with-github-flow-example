@@ -4,7 +4,7 @@ services:
     build:
       context: ./angular-hot-reload-example
       dockerfile: Dockerfile
-    image: clipbook/angular-app-hot-reload-prod:V1
+    image: clipbook/angular-app-hot-reload:V8
     container_name: angular-hot-reload
     ports:
       - '4200:80'
@@ -14,7 +14,7 @@ services:
     build:
       context: ./backend-app
       dockerfile: Dockerfile
-    image: clipbook/backend-app-hot-reload:V1
+    image: clipbook/backend-app-hot-reload:V8
     container_name: backend-app
     command: npm run start:local
     ports:
